@@ -1,0 +1,12 @@
+<ul class="flex gap-6 bg-accent py-5 2xl:px-40 xl:px-20 md:px-4 px-1">
+  <li *ngFor="let link of navLinks">
+    <a
+      [routerLink]="link.path"
+      routerLinkActive="text-[#ff6636] font-semibold"
+      [routerLinkActiveOptions]="{ exact: true }"
+      class="transition text-base font-medium text-secondary-100 hover:text-primary duration-300"
+    >
+      {{ link.label }}
+    </a>
+  </li>
+</ul>
