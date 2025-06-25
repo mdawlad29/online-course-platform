@@ -5,6 +5,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { CourseComponent } from './pages/course/course.component';
 import { InstructorComponent } from './pages/instructor/instructor.component';
 import { HomeComponent } from './pages/home/home.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -12,6 +13,8 @@ export const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'course', component: CourseComponent },
   { path: 'instructor', component: InstructorComponent },
+
+  { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({
