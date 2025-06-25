@@ -5,10 +5,11 @@ import { navLinks } from '../../data/nav-links';
 
 @Component({
   selector: 'app-top-header',
-  imports: [RouterModule, NgFor],
+  imports: [RouterModule, NgFor, NgClass],
   standalone: true,
   templateUrl: './top-header.component.html',
 })
 export class TopHeaderComponent {
   navLinks = navLinks;
+  isMenuOpen = false;
 }
