@@ -9,6 +9,6 @@ import { RouterLink } from '@angular/router';
 })
 export class LinkTagComponent {
   @Input() title?: string = '';
-  @Input() class?: string = 'text-xs capitalize text-secondary-100 block';
+  @Input() class?: string = 'text-xs capitalize text-secondary-100';
   @Input() link?: string = '/';
 }
