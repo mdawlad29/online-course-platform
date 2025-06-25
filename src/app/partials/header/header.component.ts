@@ -4,18 +4,19 @@ import { RouterLink } from '@angular/router';
 import { NotificationIconComponent } from '../../icons/notification-icon';
 import { CartIcon } from '../../icons/cart-icon';
 import { FavoriteIcon } from '../../icons/favorite-icon';
+import { LogoComponent } from '../../shared/logo/logo.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [
-    GraduationCapIconComponent,
-    NotificationIconComponent,
+    RouterLink,
     CartIcon,
     FavoriteIcon,
-    RouterLink,
+    LogoComponent,
+    NotificationIconComponent,
+    GraduationCapIconComponent,
   ],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss',
 })
 export class HeaderComponent {}

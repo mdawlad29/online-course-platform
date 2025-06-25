@@ -1,3 +1,132 @@
-<footer class="bg-gray-300 text-gray-900 text-center p-4 mt-10">
-  <p>&copy; 2025 MyApp. All rights reserved.</p>
+<footer class="bg-accent">
+  <div
+    class="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-1 lg:gap-10 gap-6 2xl:px-40 xl:px-20 md:px-4 px-2 md:py-16 py-8"
+  >
+    <div class="space-y-5 lg:col-span-2 md:col-span-2">
+      <app-logo />
+      <p class="text-sm text-secondary-100">
+        Flexible online learning with expert-led courses for all skill levels.
+        Learn anytime, anywhere.
+      </p>
+
+      <div class="flex items-center md:gap-6 gap-4">
+        <a
+          *ngFor="let social of socialLinks"
+          [href]="social.url"
+          target="_blank"
+          class="bg-primary-50 size-10 flex justify-center items-center hover:bg-primary duration-300 ease-in-out transition rounded text-primary hover:text-neutral"
+        >
+          <ng-container *ngComponentOutlet="social.icon" />
+        </a>
+      </div>
+    </div>
+
+    <!-- TOP 4 CATEGORY -->
+    <div class="lg:col-span-1">
+      <app-heading
+        [title]="'TOP 4 category'"
+        class="uppercase font-semibold text-sm mb-6"
+      />
+
+      <app-link-tag [title]="'development'" [link]="'/'" [class]="linkDesign" />
+      <app-link-tag
+        [title]="'finance & accounting'"
+        [link]="'/'"
+        [class]="linkDesign"
+      />
+      <app-link-tag [title]="'design'" [link]="'/'" [class]="linkDesign" />
+      <app-link-tag [title]="'business'" [link]="'/'" [class]="linkDesign" />
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="lg:col-span-1">
+      <app-heading
+        [title]="'quick links'"
+        class="uppercase font-semibold text-sm mb-6"
+      />
+
+      <app-link-tag [title]="'about'" [link]="'/about'" [class]="linkDesign" />
+      <app-link-tag
+        [title]="'become instructor'"
+        [link]="'/instructor'"
+        [class]="linkDesign"
+      />
+      <app-link-tag
+        [title]="'contact'"
+        [link]="'/contact'"
+        [class]="linkDesign"
+      />
+      <app-link-tag
+        [title]="'career'"
+        [link]="'/career'"
+        [class]="linkDesign"
+      />
+    </div>
+
+    <!-- SUPPORT  -->
+    <div class="lg:col-span-1">
+      <app-heading
+        [title]="'support'"
+        class="uppercase font-semibold text-sm mb-6"
+      />
+
+      <app-link-tag [title]="'help center'" [link]="'/'" [class]="linkDesign" />
+      <app-link-tag [title]="'FAQs'" [link]="'/'" [class]="linkDesign" />
+      <app-link-tag
+        [title]="'terms & condition'"
+        [link]="'/'"
+        [class]="linkDesign"
+      />
+      <app-link-tag
+        [title]="'privacy policy'"
+        [link]="'/'"
+        [class]="linkDesign"
+      />
+    </div>
+
+    <!-- DOWNLOAD -->
+    <div class="lg:col-span-1">
+      <app-heading
+        [title]="'download our app'"
+        class="uppercase font-semibold text-sm mb-6"
+      />
+
+      <div>
+        <a href="https://play.google.com/" target="_blank">
+          <img
+            src="/assets/images/apple_app.png"
+            alt="apple-play"
+            class="w-[160px] h-[40px] object-cover mb-4"
+          />
+        </a>
+
+        <a href="https://play.google.com/" target="_blank">
+          <img
+            src="/assets/images/google_app.png"
+            alt="google-play"
+            class="w-[160px] h-[40px] object-cover"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-primary w-full h-[1px]"></div>
+
+  <div
+    class="flex justify-between items-center text-xs 2xl:px-40 xl:px-20 md:px-4 px-2 py-3"
+  >
+    <p>&copy; 2025 E-tutor. All rights reserved.</p>
+
+    <p>
+      Developed by
+      <a
+        href="https://awlad.vercel.app/"
+        target="_blank"
+        class="text-blue-600 hover:underline font-bold"
+      >
+        Awlad</a
+      >
+    </p>
+  </div>
 </footer>
