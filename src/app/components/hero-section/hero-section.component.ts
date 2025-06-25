@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-hero-section',
   standalone: true,
-  imports: [LinkTagComponent, ButtonComponent],
+  imports: [ButtonComponent],
   templateUrl: './hero-section.component.html',
 })
 export class HeroSectionComponent {

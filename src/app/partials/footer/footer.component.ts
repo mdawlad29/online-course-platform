@@ -6,7 +6,14 @@ import { InstagramIcon } from '../../icons/app-icon-instagram';
 import { TwitterIcon } from '../../icons/app-icon-twitter';
 import { YoutubeIcon } from '../../icons/app-icon-youtube';
 import { LinkedinIcon } from '../../icons/app-icon-linkedin';
-import { NgClass, NgComponentOutlet, NgFor } from '@angular/common';
+import {
+  NgClass,
+  NgComponentOutlet,
+  NgFor,
+  NgSwitch,
+  NgSwitchCase,
+  NgSwitchDefault,
+} from '@angular/common';
 import { socialLinks } from '../../data/social-links';
 import { HeadingComponent } from '../../shared/heading/heading.component';
 import { LinkTagComponent } from '../../shared/link-tag/link-tag.component';
@@ -27,6 +34,9 @@ import { LinkTagComponent } from '../../shared/link-tag/link-tag.component';
     LinkedinIcon,
     HeadingComponent,
     LinkTagComponent,
+    NgSwitch,
+    NgSwitchCase,
+    NgSwitchDefault,
   ],
   templateUrl: './footer.component.html',
 })

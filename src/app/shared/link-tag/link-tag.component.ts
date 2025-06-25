@@ -4,6 +4,7 @@ import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-link-tag',
+  standalone: true,
   imports: [RouterLink, NgClass],
   templateUrl: './link-tag.component.html',
 })

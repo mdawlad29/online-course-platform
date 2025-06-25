@@ -16,7 +16,13 @@
           target="_blank"
           class="bg-primary-50 size-10 flex justify-center items-center hover:bg-primary duration-300 ease-in-out transition rounded text-primary hover:text-neutral"
         >
-          <ng-container *ngComponentOutlet="social.icon" />
+          <ng-container [ngSwitch]="social.icon">
+            <app-icon-facebook *ngSwitchCase="'facebook'" />
+            <app-icon-linkedin *ngSwitchCase="'linkedin'" />
+            <app-icon-twitter *ngSwitchCase="'twitter'" />
+            <app-icon-instagram *ngSwitchCase="'instagram'" />
+            <app-icon-youtube *ngSwitchCase="'youtube'" />
+          </ng-container>
         </a>
       </div>
     </div>
