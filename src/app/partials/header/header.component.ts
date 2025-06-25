@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { GraduationCapIconComponent } from '../../icons/graduate-cap-icon';
 import { RouterLink } from '@angular/router';
 import { NotificationIconComponent } from '../../icons/notification-icon';
 import { CartIcon } from '../../icons/cart-icon';
@@ -15,7 +14,6 @@ import { LogoComponent } from '../../shared/logo/logo.component';
     FavoriteIcon,
     LogoComponent,
     NotificationIconComponent,
-    GraduationCapIconComponent,
   ],
   templateUrl: './header.component.html',
 })

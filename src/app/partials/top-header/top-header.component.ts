@@ -1,11 +1,11 @@
-import { NgClass, NgFor } from '@angular/common';
+import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { navLinks } from '../../data/nav-links';
 
 @Component({
   selector: 'app-top-header',
-  imports: [RouterModule, NgFor, NgClass],
+  imports: [RouterModule, NgFor],
   standalone: true,
   templateUrl: './top-header.component.html',
 })
