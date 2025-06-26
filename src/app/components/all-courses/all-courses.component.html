@@ -1,14 +1,11 @@
 <section class="2xl:px-40 xl:px-20 md:px-4 px-2 py-10">
-  <app-heading
-    [title]="'Recently added courses'"
-    class="flex justify-center font-semibold text-secondary-100 md:text-3xl text-2xl mb-4"
-  />
+  <app-heading [title]="'All courses'" [isBorder]="true" />
 
   <div
     class="grid 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6"
   >
     <app-card
-      *ngFor="let course of courseData.slice(0, 4); let i = index"
+      *ngFor="let course of courseData; let i = index"
       [rating]="course.rating"
       [price]="course.price"
       [title]="course.title"
@@ -25,16 +22,6 @@
       "
       [image]="course.img"
       [description]="course.desc"
-    />
-  </div>
-
-  <div class="mt-10">
-    <app-link-tag
-      [title]="'View all courses &#8594;'"
-      [link]="'/courses'"
-      [class]="
-        'bg-primary-50 text-primary hover:bg-primary hover:text-neutral duration-300 ease-out transition w-[180px] text-center mx-auto py-3 block text-sm font-semibold'
-      "
     />
   </div>
 </section>

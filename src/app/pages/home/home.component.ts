@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
 import { HeroSectionComponent } from '../../components/hero-section/hero-section.component';
 import { CategoryComponent } from '../../components/category/category.component';
-import { CourseSellingComponent } from '../../components/course-selling/course-selling.component';
-import { RecentCourseComponent } from '../../components/recent-course/recent-course.component';
+import {
+  CourseSellingComponent,
+  RecentCourseComponent,
+} from '../../components/all-courses/all-courses.component';
+import { InstructorComponent } from '../../components/instructor/instructor.component';
 
 @Component({
   selector: 'app-home',
@@ -12,6 +15,7 @@ import { RecentCourseComponent } from '../../components/recent-course/recent-cou
     CategoryComponent,
     CourseSellingComponent,
     RecentCourseComponent,
+    InstructorComponent,
   ],
   templateUrl: './home.component.html',
 })
