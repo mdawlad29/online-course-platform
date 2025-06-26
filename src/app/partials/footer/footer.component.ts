@@ -23,9 +23,6 @@ import { LinkTagComponent } from '../../shared/link-tag/link-tag.component';
   standalone: true,
   imports: [
     NgFor,
-    NgClass,
-    RouterLink,
-    NgComponentOutlet,
     LogoComponent,
     FacebookIcon,
     InstagramIcon,
@@ -36,7 +33,6 @@ import { LinkTagComponent } from '../../shared/link-tag/link-tag.component';
     LinkTagComponent,
     NgSwitch,
     NgSwitchCase,
-    NgSwitchDefault,
   ],
   templateUrl: './footer.component.html',
 })
