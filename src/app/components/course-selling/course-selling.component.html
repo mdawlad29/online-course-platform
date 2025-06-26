@@ -6,50 +6,36 @@
   <div
     class="grid 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6"
   >
-    <div
-      *ngFor="let data of [1, 2, 3, 4, 5, 6, 7, 8]; let i = index"
-      class="group relative border border-secondary-50 shadow hover:shadow-md duration-300 ease-in-out overflow-hidden rounded-lg"
-    >
-      <!-- Image -->
-      <img
-        src="/assets/images/Course_Images_1.png"
-        alt="hero"
-        class="w-full h-[200px] object-cover mb-3"
-      />
-
-      <!-- Overlay with button -->
-      <div
-        class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 flex justify-center items-center transition-all duration-500"
-      >
-        <a
-          [routerLink]="['/course', i]"
-          class="bg-primary text-white size-12 rounded-full shadow-lg opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 duration-500 ease-in-out text-3xl flex items-center justify-center"
-        >
-          &#8599;
-        </a>
-      </div>
-
-      <!-- Text Content -->
-      <div class="px-3">
-        <div class="flex justify-between items-center mb-3">
-          <h5 class="bg-primary-50 px-2 py-1 text-primary text-sm">Course</h5>
-          <p class="text-primary text-sm font-bold">$10</p>
-        </div>
-
-        <p class="text-secondary-100 text-sm">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Voluptatibus, illum!
-        </p>
-      </div>
-
-      <div class="w-full bg-secondary-75 h-[2px] my-3"></div>
-
-      <div class="flex justify-between items-center px-3 mb-3">
-        <h1 class="text-secondary-100 text-sm flex items-center gap-1">
-          <app-icon-star class="text-primary" /> 5.0
-        </h1>
-        <p class="text-gray-600 text-sm font-bold">265.7k students</p>
-      </div>
-    </div>
+    <app-card
+      *ngFor="let course of courseData.slice(0, 8); let i = index"
+      [rating]="course.rating"
+      [price]="course.price"
+      [title]="course.title"
+      [student]="course.student + ' students'"
+      [link]="'/courses/' + i"
+      [titleClass]="
+        (i === 0
+          ? 'bg-secondary text-primary'
+          : i === 1
+          ? 'bg-secondary-75 text-blue-500'
+          : i === 2
+          ? 'bg-success text-success-100'
+          : i === 3
+          ? 'bg-secondary-75 text-secondary-30'
+          : i === 4
+          ? 'bg-error text-error'
+          : i === 5
+          ? 'bg-warning text-warning'
+          : i === 6
+          ? 'bg-secondary-75 text-secondary-30'
+          : i === 7
+          ? 'bg-success text-success-100'
+          : i === 8
+          ? 'bg-secondary text-primary'
+          : 'bg-warning text-warning') + ' px-2 py-1 text-sm capitalize'
+      "
+      [image]="course.img"
+      [description]="course.desc"
+    />
   </div>
 </section>

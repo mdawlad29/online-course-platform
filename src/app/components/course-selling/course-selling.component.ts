@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
 import { HeadingComponent } from '../../shared/heading/heading.component';
 import { NgFor } from '@angular/common';
-import { StarIcon } from '../../icons/app-icon-star';
-import { RouterLink } from '@angular/router';
+import { CardComponent } from '../../shared/Card/card.component';
+import { courseData } from '../../data/course-data';
 
 @Component({
   selector: 'app-course-selling',
   standalone: true,
-  imports: [NgFor, RouterLink, HeadingComponent, StarIcon],
+  imports: [NgFor, HeadingComponent, CardComponent],
   templateUrl: './course-selling.component.html',
 })
-export class CourseSellingComponent {}
+export class CourseSellingComponent {
+  courseData = courseData;
+}
