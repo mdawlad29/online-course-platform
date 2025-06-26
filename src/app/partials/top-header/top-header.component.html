@@ -4,7 +4,7 @@
   <li *ngFor="let link of navLinks">
     <a
       [routerLink]="link.path"
-      routerLinkActive="text-[#ff6636] font-semibold"
+      routerLinkActive="!text-[#ff6636] font-semibold"
       [routerLinkActiveOptions]="{ exact: true }"
       class="transition md:text-base text-sm font-medium text-secondary-100 hover:text-primary duration-300"
     >
