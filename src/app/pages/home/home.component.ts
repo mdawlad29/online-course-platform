@@ -5,7 +5,10 @@ import {
   CourseSellingComponent,
   RecentCourseComponent,
 } from '../../components/all-courses/all-courses.component';
-import { InstructorComponent } from '../../components/instructor/instructor.component';
+import {
+  InstructorComponent,
+  TopInstructorComponent,
+} from '../../components/instructor/instructor.component';
 
 @Component({
   selector: 'app-home',
@@ -16,6 +19,7 @@ import { InstructorComponent } from '../../components/instructor/instructor.comp
     CourseSellingComponent,
     RecentCourseComponent,
     InstructorComponent,
+    TopInstructorComponent,
   ],
   templateUrl: './home.component.html',
 })
