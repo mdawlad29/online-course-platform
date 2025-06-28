@@ -1,9 +1,14 @@
-import { NgFor } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { HeadingComponent } from '../../shared/heading/heading.component';
 import { CardComponent } from '../../shared/Card/card.component';
 import { courseData } from '../../data/course-data';
 import { LinkTagComponent } from '../../shared/link-tag/link-tag.component';
+import { StarIcon } from '../../icons/app-icon-star';
+import { PlayIcon } from '../../icons/app-icon-paly';
+import { DocumentIcon } from '../../icons/app-icon-document';
+import { ReadingIcon } from '../../icons/app-icon-reading';
+import { LiveIcon } from '../../icons/app-icon-live';
 
 @Component({
   selector: 'app-course-selling',
@@ -38,7 +43,16 @@ export class AllCoursesComponent {
 @Component({
   selector: 'app-course-details',
   standalone: true,
-  imports: [],
+  imports: [
+    NgFor,
+    NgIf,
+    StarIcon,
+    PlayIcon,
+    DocumentIcon,
+    ReadingIcon,
+    LiveIcon,
+    HeadingComponent,
+  ],
   templateUrl: './course-details.component.html',
 })
 export class CourseDetailsComponent {

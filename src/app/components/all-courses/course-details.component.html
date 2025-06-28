@@ -1,1 +1,119 @@
-<section>course details</section>
+<section class="">
+  <!-- Banner -->
+  <div
+    class="2xl:px-40 xl:px-20 md:px-4 px-2 bg-success h-64 py-10 flex flex-col justify-center mb-10"
+  >
+    <h1 class="md:text-3xl text-xl font-bold text-secondary-100 mb-4">
+      The Complete 2021 Web Development Bootcamp
+    </h1>
+
+    <div class="flex items-center gap-2 mb-2">
+      <app-icon-star
+        *ngFor="let star of [1, 2, 3, 4, 5]"
+        class="text-primary"
+      />
+      <span class="text-secondary-100 font-semibold"
+        >(79.2% of students gave a 5 rating at the end of the course)</span
+      >
+    </div>
+
+    <p class="text-gray-600 md:text-lg text-md">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis,
+      <br />
+      voluptas. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+    </p>
+  </div>
+
+  <!-- Course Details -->
+  <div class="2xl:px-40 xl:px-20 md:px-4 px-2">
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:gap-8 gap-4">
+      <div class="md:col-span-2 space-y-8">
+        <!-- Course Constructor Info -->
+        <div>
+          <app-heading
+            [title]="'Course Constructor'"
+            class="text-2xl font-semibold text-secondary-100 capitalize flex justify-start"
+          />
+
+          <div
+            class="border border-gray-300 rounded-lg p-5 flex items-center gap-6 -mt-3"
+          >
+            <div class="bg-primary-50 rounded-full size-28 overflow-hidden">
+              <img
+                src="/assets/images/instructor_image_1.png"
+                alt="hero"
+                class="w-full h-full object-cover mt-2"
+              />
+            </div>
+
+            <div>
+              <h4 class="text-xl capitalize font-semibold text-primary mb-2">
+                james smith
+              </h4>
+
+              <p class="text-secondary-100 capitalize">Software developer</p>
+              <p class="text-sm text-secondary-100">BSc in CSE</p>
+              <p class="text-secondary-100 text-sm">BRAC University</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course Structure -->
+        <div>
+          <app-heading
+            [title]="'How the course is structured'"
+            class="text-2xl font-semibold text-secondary-100 flex justify-start"
+          />
+
+          <div
+            class="-mt-3 bg-success rounded-lg p-5 grid md:grid-cols-2 grid-cols-1 gap-5"
+          >
+            <div
+              *ngFor="let item of [1, 2, 3, 4]; let i = index"
+              class="flex gap-4"
+            >
+              <div>
+                <div
+                  class="size-10 bg-blue-400 text-neutral rounded-full flex justify-center items-center"
+                >
+                  <ng-container *ngIf="i === 0">
+                    <app-icon-play />
+                  </ng-container>
+                  <ng-container *ngIf="i === 1">
+                    <app-icon-document />
+                  </ng-container>
+                  <ng-container *ngIf="i === 2">
+                    <app-icon-reading />
+                  </ng-container>
+                  <ng-container *ngIf="i === 3">
+                    <app-icon-live />
+                  </ng-container>
+                </div>
+              </div>
+
+              <div>
+                <h4 class="text-xl font-semibold text-green-600 mb-2">
+                  {{
+                    i === 0
+                      ? "50+ video lectures"
+                      : i === 1
+                      ? "38 lecture sheets"
+                      : i === 2
+                      ? "Reading and listening test"
+                      : "Doubt solving live class"
+                  }}
+                </h4>
+
+                <p class="text-gray-600 text-sm">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel
+                  quis suscipit alias.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border border-[red] md:col-span-1">hello</div>
+    </div>
+  </div>
+</section>
