@@ -1,20 +1,34 @@
 import { Component } from '@angular/core';
 import { HeadingComponent } from '../../shared/heading/heading.component';
-import { RouterLink } from '@angular/router';
-import { NgFor } from '@angular/common';
+import { NgClass, NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-instructor',
   standalone: true,
-  imports: [RouterLink, HeadingComponent],
+  imports: [NgFor, NgClass, HeadingComponent],
   templateUrl: './instructor.component.html',
 })
-export class InstructorComponent {}
+export class InstructorComponent {
+  stepsData = [
+    {
+      title: 'Apply to become instructor',
+    },
+    {
+      title: 'Build & edit your profile',
+    },
+    {
+      title: 'Start teaching & earning',
+    },
+    {
+      title: 'Create your new course',
+    },
+  ];
+}
 
 @Component({
   selector: 'app-top-instructor',
   standalone: true,
-  imports: [NgFor, RouterLink, HeadingComponent],
+  imports: [NgFor, HeadingComponent],
   templateUrl: './top-instructor.component.html',
 })
 export class TopInstructorComponent {}

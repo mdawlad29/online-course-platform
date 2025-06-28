@@ -1,6 +1,86 @@
-<section class="bg-accent 2xl:px-40 xl:px-20 md:px-4 px-2 py-40">
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
-    <div class="bg-primary">hello</div>
-    <div class="bg-primary">hello</div>
+<section class="bg-accent 2xl:px-40 xl:px-20 md:px-4 px-2 py-10">
+  <div class="">
+    <div class="grid grid-cols-1 md:grid-cols-2 md:gap-0 gap-y-5 items-center">
+      <div class="relative lg:size-[400px] size-[320px] group mx-auto">
+        <div
+          class="bg-primary lg:size-[250px] size-[200px] absolute left-0 top-0 group-hover:-translate-x-1 group-hover:-translate-y-1 duration-300 ease-in-out transition-all rounded-tr-3xl rounded-bl-3xl"
+        ></div>
+
+        <div
+          class="bg-neutral lg:size-[380px] size-[300px] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
+        >
+          <img
+            src="/assets/images/instructor_image_1.png"
+            alt="instructor"
+            class="w-full h-full object-contain"
+          />
+        </div>
+
+        <div
+          class="bg-primary lg:size-[250px] size-[200px] absolute right-0 bottom-0 rounded-tr-3xl rounded-bl-3xl group-hover:translate-x-1 group-hover:translate-y-1 duration-300 ease-in-out transition-all"
+        ></div>
+      </div>
+
+      <div
+        class="bg-neutral py-10 px-5 shadow-md lg:rounded-tr-[50px] lg:rounded-tl-none rounded-tl-[50px] lg:rounded-bl-[50px] lg:rounded-br-none rounded-br-[50px]"
+      >
+        <app-heading
+          [isBorder]="true"
+          [title]="'Your teaching & learning steps'"
+          class="font-semibold text-secondary-100 lg:text-3xl text-xl mb-1"
+        />
+
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 gap-x-4 lg:gap-y-10 gap-y-5 items-center"
+        >
+          <div
+            *ngFor="let step of stepsData; let i = index"
+            class="flex items-center lg:justify-center gap-3"
+          >
+            <div
+              class="size-8 flex items-center justify-center rounded-full text-lg"
+              [ngClass]="
+                i === 0
+                  ? 'bg-secondary-75 text-blue-500'
+                  : i === 1
+                  ? 'bg-secondary text-primary'
+                  : i === 2
+                  ? 'bg-success text-success-100'
+                  : 'bg-secondary-75 text-blue-500'
+              "
+            >
+              {{ i + 1 }}
+            </div>
+            <p class="text-gray-600 text-sm">{{ step.title }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <div class="px-4 flex justify-between items-center">
+        <div class="space-y-6">
+          <h4 class="text-xl font-semibold text-neutral">
+            Become an instructor
+          </h4>
+
+          <p class="text-sm text-secondary-100">
+            Instructors from around the world teach millions of <br />
+            students on Udemy. We provide the tools and skills to teach what you
+            love.
+          </p>
+
+          <button>Start teaching</button>
+        </div>
+
+        <div>
+          <img
+            src="/assets/images/become_instructor.png"
+            alt="hero"
+            class="object-cover"
+          />
+        </div>
+      </div>
+      <div class="bg-neutral">hello</div>
+    </div> -->
   </div>
 </section>

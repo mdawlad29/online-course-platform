@@ -8,5 +8,5 @@ export const navLinks: NavLinks[] = [
   { label: 'About', path: '/about' },
   { label: 'Contact', path: '/contact' },
   { label: 'Courses', path: '/courses' },
-  { label: 'Become a Instructor', path: '#instructor' },
+  { label: 'Become a Instructor', path: '/instructor' },
 ];
