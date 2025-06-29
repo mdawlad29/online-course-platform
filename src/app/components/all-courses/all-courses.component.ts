@@ -13,6 +13,7 @@ import { AppIconArrowDown } from '../../icons/app-icon-arrowDown';
 import { AppIconArrowUp } from '../../icons/app-icon-arrowUp';
 import { AccordionComponent } from '../../shared/accordion/accordion.component';
 import { accordionItems } from '../../data/accordionItems';
+import { CallIcon } from '../../icons/app-icon-call';
 
 @Component({
   selector: 'app-course-selling',
@@ -57,6 +58,7 @@ export class AllCoursesComponent {
     LiveIcon,
     HeadingComponent,
     AccordionComponent,
+    CallIcon,
   ],
   templateUrl: './course-details.component.html',
 })
