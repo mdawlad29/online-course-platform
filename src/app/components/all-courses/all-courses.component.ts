@@ -1,4 +1,4 @@
-import { NgFor, NgIf } from '@angular/common';
+import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { HeadingComponent } from '../../shared/heading/heading.component';
 import { CardComponent } from '../../shared/Card/card.component';
@@ -9,6 +9,10 @@ import { PlayIcon } from '../../icons/app-icon-paly';
 import { DocumentIcon } from '../../icons/app-icon-document';
 import { ReadingIcon } from '../../icons/app-icon-reading';
 import { LiveIcon } from '../../icons/app-icon-live';
+import { AppIconArrowDown } from '../../icons/app-icon-arrowDown';
+import { AppIconArrowUp } from '../../icons/app-icon-arrowUp';
+import { AccordionComponent } from '../../shared/accordion/accordion.component';
+import { accordionItems } from '../../data/accordionItems';
 
 @Component({
   selector: 'app-course-selling',
@@ -52,9 +56,20 @@ export class AllCoursesComponent {
     ReadingIcon,
     LiveIcon,
     HeadingComponent,
+    AccordionComponent,
   ],
   templateUrl: './course-details.component.html',
 })
 export class CourseDetailsComponent {
   courseData = courseData;
+  accordionItems = accordionItems;
+  activeIndex: number | null = null;
+
+  toggleAccordion(index: number) {
+    if (this.activeIndex === index) {
+      this.activeIndex = null;
+    } else {
+      this.activeIndex = index;
+    }
+  }
 }
