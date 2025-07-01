@@ -26,7 +26,6 @@ import { LoaderComponent } from './shared/loader/loader.component';
     LoaderComponent,
   ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'e-tutor';

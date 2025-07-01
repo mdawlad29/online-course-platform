@@ -1,5 +1,5 @@
 <header
-  class="p-4 2xl:px-40 xl:px-20 md:px-4 px-2 z-50 bg-white duration-500 ease-in-out transition-all"
+  class="py-4 2xl:px-40 xl:px-20 md:px-4 px-2 z-50 bg-white duration-500 ease-in-out transition-all"
   [ngClass]="{
     'shadow-md fixed w-full top-0': scrolled
   }"
@@ -23,8 +23,13 @@
       <notification-icon
         class="text-gray-500 flex items-center cursor-pointer"
       />
+
       <favorite-icon class="text-gray-500 flex items-center cursor-pointer" />
-      <cart-icon class="text-gray-500 flex items-center cursor-pointer" />
+
+      <cart-icon
+        (click)="handleClick()"
+        class="text-gray-500 flex items-center cursor-pointer"
+      />
 
       <a
         routerLink="/signup"

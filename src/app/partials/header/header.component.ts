@@ -1,5 +1,5 @@
 import { Component, HostListener } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { NotificationIconComponent } from '../../icons/notification-icon';
 import { CartIcon } from '../../icons/cart-icon';
 import { FavoriteIcon } from '../../icons/favorite-icon';
@@ -21,6 +21,12 @@ import { NgClass } from '@angular/common';
 })
 export class HeaderComponent {
   scrolled = false;
+
+  constructor(private router: Router) {}
+
+  handleClick() {
+    this.router.navigate(['cart']);
+  }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {

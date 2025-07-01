@@ -7,7 +7,7 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { CoursesComponent } from './pages/courses/courses.component';
 import { CourseDetailsComponent } from './components/all-courses/all-courses.component';
 import { SigninComponent } from './pages/signin/signin.component';
-import { SignupComponent } from './pages/signup/signup.component';
+import { CartComponent } from './pages/cart/cart.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -15,7 +15,8 @@ export const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'courses', component: CoursesComponent },
   { path: 'courses/:id', component: CourseDetailsComponent },
-  { path: 'signup', component: SignupComponent },
+  { path: 'cart', component: CartComponent },
+  { path: 'signin', component: SigninComponent },
   { path: 'signin', component: SigninComponent },
 
   { path: '**', component: PageNotFoundComponent },

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { LinkTagComponent } from '../../shared/link-tag/link-tag.component';
 import { ButtonComponent } from '../../shared/button/button.component';
 import { Router } from '@angular/router';
 
