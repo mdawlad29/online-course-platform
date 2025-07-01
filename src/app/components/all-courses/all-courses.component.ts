@@ -60,7 +60,6 @@ export class AllCoursesComponent {
     HeadingComponent,
     AccordionComponent,
     CallIcon,
-    ButtonComponent,
   ],
   templateUrl: './course-details.component.html',
 })
