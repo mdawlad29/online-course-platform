@@ -9,6 +9,7 @@ import { CourseDetailsComponent } from './components/all-courses/all-courses.com
 import { SigninComponent } from './pages/signin/signin.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { InstructorComponent } from './pages/instructor/instructor.component';
+import { SignupComponent } from './pages/signup/signup.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -18,7 +19,7 @@ export const routes: Routes = [
   { path: 'instructor', component: InstructorComponent },
   { path: 'courses/:id', component: CourseDetailsComponent },
   { path: 'cart', component: CartComponent },
-  { path: 'signin', component: SigninComponent },
+  { path: 'signup', component: SignupComponent },
   { path: 'signin', component: SigninComponent },
 
   { path: '**', component: PageNotFoundComponent },
