@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
+import { CartDetailsComponent } from '../../components/cart-details/cart-details.component';
 
 @Component({
   selector: 'app-cart',
-  imports: [],
-  templateUrl: './cart.component.html',
-  styleUrl: './cart.component.scss'
+  imports: [CartDetailsComponent],
+  template: ` <app-cart-details /> `,
+  standalone: true,
 })
-export class CartComponent {
-
-}
+export class CartComponent {}

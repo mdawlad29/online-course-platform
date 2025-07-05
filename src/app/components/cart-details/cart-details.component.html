@@ -1,0 +1,102 @@
+<section class="2xl:px-40 xl:px-20 md:px-4 px-2 my-10">
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
+    <div class="col-span-2 rounded-md bg-accent pb-5">
+      <div class="px-5 pt-5">
+        <div class="flex items-center justify-between">
+          <h2 class="text-[24px] font-semibold">My Cart (3)</h2>
+
+          <div class="flex gap-2">
+            <input
+              type="checkbox"
+              name="checked"
+              id=""
+              class="text-sm text-[#475569]"
+            />
+            <button class="text-sm text-[#475569]">Clear All</button>
+          </div>
+        </div>
+
+        <hr class="!mt-27px] !mb-[21px] bg-[#D9D9D9]" />
+      </div>
+
+      <div class="pl-5">
+        <div *ngFor="let item of [1, 2, 3]; let i = index">
+          <div class="bg-neutral my-4 px-3 py-[10px]">
+            <div class="flex items-center gap-2">
+              <input type="checkbox" name="" id="" />
+
+              <img
+                src="/assets/icons/package-icon.png"
+                alt="product"
+                class="rounded object-cover size-5"
+              />
+              <h2
+                class="uppercase leading-[20px] text-[14px] text-secondary-100"
+              >
+                course
+              </h2>
+              <app-icon-arrow-forward class="text-secondary-100" />
+            </div>
+          </div>
+
+          <div
+            class="flex items-start md:flex-nowrap flex-wrap gap-4 pl-3 pr-5"
+          >
+            <input
+              type="checkbox"
+              name=""
+              id=""
+              class="text-sm text-[#475569]"
+            />
+            <img
+              src="/assets/images/Course_Images_6.png"
+              alt="product"
+              class="size-[100px] rounded object-cover"
+            />
+
+            <div class="w-full">
+              <h3
+                class="text-[16px] font-semibold capitalize leading-[24px] text-secondary-100 mb-2"
+              >
+                the complete fundamental stock trending course
+              </h3>
+
+              <div class="flex items-center gap-2 mb-2">
+                <h3 class="text-base font-semibold text-secondary-100">
+                  Price:
+                </h3>
+                <div>
+                  <span class="text-[20px] font-bold text-primary">
+                    ৳5521
+                  </span>
+
+                  <span class="text-sm text-[#475569] line-through">
+                    ৳5625
+                  </span>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-[26px]">
+                <div
+                  class="rounded-full border border-[#E2E8F0] p-0.5 flex items-center gap-[26px]"
+                >
+                  <app-icon-minus
+                    class="text-primary bg-gray-200 p-0.5 rounded-full cursor-pointer"
+                  />
+                  <span>{{ i + 1 }}</span>
+                  <app-icon-add
+                    class="text-primary bg-gray-200 p-0.5 rounded-full cursor-pointer"
+                  />
+                </div>
+
+                <app-icon-delete class="text-primary cursor-pointer" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-span-1 border border-[red]">hello</div>
+  </div>
+</section>

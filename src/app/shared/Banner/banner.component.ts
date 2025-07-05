@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
   imports: [NgClass, NgIf],
   template: `
     <div
-      class="2xl:px-40 xl:px-20 md:px-4 px-2 bg-success h-64 py-10 flex flex-col justify-center items-center mb-10"
+      class="2xl:px-40 xl:px-20 md:px-4 px-2 bg-success h-52 py-10 flex flex-col justify-center items-center mb-10"
       [ngClass]="class"
     >
       <h1 class="md:text-3xl text-xl font-bold text-secondary-100 mb-4">
