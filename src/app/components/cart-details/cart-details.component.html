@@ -3,27 +3,30 @@
     <div class="col-span-2 rounded-md bg-accent pb-5">
       <div class="px-5 pt-5">
         <div class="flex items-center justify-between">
-          <h2 class="text-[24px] font-semibold">My Cart (3)</h2>
+          <h2 class="text-[24px] font-semibold text-primary">My Cart (3)</h2>
 
-          <div class="flex gap-2">
+          <div class="flex gap-2 items-center">
             <input
               type="checkbox"
               name="checked"
               id=""
-              class="text-sm text-[#475569]"
+              class="checkbox-wrapper"
             />
-            <button class="text-sm text-[#475569]">Clear All</button>
+            <button class="text-sm text-secondary-100 hover:underline">
+              Clear All
+            </button>
           </div>
         </div>
 
-        <hr class="!mt-27px] !mb-[21px] bg-[#D9D9D9]" />
+        <hr class="mt-2 mb-8" />
       </div>
 
+      <!-- Cart Items -->
       <div class="pl-5">
         <div *ngFor="let item of [1, 2, 3]; let i = index">
           <div class="bg-neutral my-4 px-3 py-[10px]">
             <div class="flex items-center gap-2">
-              <input type="checkbox" name="" id="" />
+              <input type="checkbox" name="" id="" class="checkbox-wrapper" />
 
               <img
                 src="/assets/icons/package-icon.png"
@@ -39,15 +42,7 @@
             </div>
           </div>
 
-          <div
-            class="flex items-start md:flex-nowrap flex-wrap gap-4 pl-3 pr-5"
-          >
-            <input
-              type="checkbox"
-              name=""
-              id=""
-              class="text-sm text-[#475569]"
-            />
+          <div class="flex items-start md:flex-nowrap flex-wrap gap-4">
             <img
               src="/assets/images/Course_Images_6.png"
               alt="product"
@@ -67,15 +62,16 @@
                 </h3>
                 <div>
                   <span class="text-[20px] font-bold text-primary">
-                    ৳5521
+                    ৳ 500
                   </span>
 
-                  <span class="text-sm text-[#475569] line-through">
-                    ৳5625
+                  <span class="text-sm text-secondary-100 line-through">
+                    ৳ 600
                   </span>
                 </div>
               </div>
 
+              <!-- Quantity -->
               <div class="flex items-center gap-[26px]">
                 <div
                   class="rounded-full border border-[#E2E8F0] p-0.5 flex items-center gap-[26px]"
@@ -89,7 +85,7 @@
                   />
                 </div>
 
-                <app-icon-delete class="text-primary cursor-pointer" />
+                <app-icon-delete class="text-[red] cursor-pointer" />
               </div>
             </div>
           </div>
@@ -97,6 +93,65 @@
       </div>
     </div>
 
-    <div class="col-span-1 border border-[red]">hello</div>
+    <!-- Order Summary -->
+    <div class="col-span-1">
+      <div class="sticky top-20 rounded-md bg-accent px-4 py-[13px] lg:px-6">
+        <h2 class="text-[24px] font-medium text-primary leading-[32px]">
+          Order summary
+        </h2>
+        <hr class="mt-2 mb-8" />
+
+        <div class="mb-3 mt-4 flex justify-between">
+          <span
+            class="text-[16px] font-semibold leading-[24px] text-secondary-100"
+          >
+            Price (3 items)
+          </span>
+
+          <span
+            class="flex items-center text-[16px] leading-[24px] text-secondary-100"
+          >
+            ৳ 1500
+          </span>
+        </div>
+
+        <div
+          class="mb-6 flex items-center overflow-hidden rounded border border-primary"
+        >
+          <Input
+            placeholder="Coupon code"
+            class="border-none focus:outline-none w-full h-full bg-transparent pl-3 text-sm"
+          />
+
+          <button
+            type="primary"
+            class="h-[40px] w-[82px] bg-primary text-center text-[16px] font-medium !text-neutral"
+          >
+            Apply
+          </button>
+        </div>
+
+        <div class="mb-6 flex justify-between font-semibold">
+          <span
+            class="capitalize text-[18px] font-medium leading-[28px] text-secondary-100"
+          >
+            Total amount
+          </span>
+          <span
+            class="flex items-center text-[20px] leading-[28px] text-[#171717]"
+          >
+            ৳ 1500
+          </span>
+        </div>
+
+        <button
+          (click)="handleSubmit()"
+          type="primary"
+          class="mb-10 bg-primary w-full py-2 rounded text-neutral border border-primary hover:border-primary hover:bg-primary-50 hover:text-primary duration-300 ease-in-out transition-all"
+        >
+          Proceed to Checkout
+        </button>
+      </div>
+    </div>
   </div>
 </section>

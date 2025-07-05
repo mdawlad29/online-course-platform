@@ -18,4 +18,8 @@ import { AppIconArrowForward } from '../../icons/app-icon-arrowForward';
   ],
   templateUrl: './cart-details.component.html',
 })
-export class CartDetailsComponent {}
+export class CartDetailsComponent {
+  handleSubmit() {
+    window.alert('Order placed successfully..!!');
+  }
+}
