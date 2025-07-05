@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { AllInstructorComponent } from '../../components/instructor/instructor.component';
 
 @Component({
   selector: 'app-instructor',
-  imports: [],
-  templateUrl: './instructor.component.html',
+  imports: [AllInstructorComponent],
+  template: `<app-all-instructor />`,
 })
 export class InstructorComponent {}

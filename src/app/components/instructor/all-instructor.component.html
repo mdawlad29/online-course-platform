@@ -1,0 +1,55 @@
+<section class="mb-10">
+  <!-- Instructor Banner -->
+  <app-banner [title]="'All instructors'" />
+
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 items-center 2xl:px-40 xl:px-20 md:px-4 px-2"
+  >
+    <div
+      *ngFor="let data of [1, 2, 3, 4, 5, 6, 7, 8]; let i = index"
+      class="relative hover:-translate-y-2 duration-300 ease-in-out transition h-[350px] group"
+    >
+      <div
+        class="rounded-bl-full relative bg-primary-50 group-hover:bg-primary duration-300 ease-in-out transition overflow-x-hidden"
+      >
+        <img
+          [src]="
+            i === 0
+              ? '/assets/images/instructor_image_1.png'
+              : i === 1
+              ? '/assets/images/instructor_image_2.png'
+              : i === 2
+              ? '/assets/images/instructor_image_3.png'
+              : '/assets/images/instructor_image_4.png'
+          "
+          alt="hero"
+          class="size-[300px] object-contain ml-4"
+        />
+      </div>
+
+      <div
+        class="bg-primary-50 group-hover:bg-primary group-hover:text-neutral duration-300 ease-in-out transition w-full py-2 absolute left-0 bottom-0.5 text-primary text-lg font-semibold capitalize text-center"
+      >
+        {{
+          i === 0
+            ? "james smith"
+            : i === 1
+            ? "jane copper"
+            : i === 2
+            ? "devon lanee"
+            : "kathryn murphy"
+        }}
+
+        <span class="block text-sm text-secondary-100">{{
+          i === 0
+            ? "software developer"
+            : i === 1
+            ? "UI/UX designer"
+            : i === 2
+            ? "lead developer"
+            : "adobe illustrator"
+        }}</span>
+      </div>
+    </div>
+  </div>
+</section>

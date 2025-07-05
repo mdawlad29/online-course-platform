@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HeadingComponent } from '../../shared/heading/heading.component';
 import { NgClass, NgFor } from '@angular/common';
+import { BannerComponent } from '../../shared/Banner/banner.component';
 
 @Component({
   selector: 'app-instructor',
@@ -32,3 +33,10 @@ export class InstructorComponent {
   templateUrl: './top-instructor.component.html',
 })
 export class TopInstructorComponent {}
+
+@Component({
+  selector: 'app-all-instructor',
+  imports: [NgFor, BannerComponent],
+  templateUrl: './all-instructor.component.html',
+})
+export class AllInstructorComponent {}
